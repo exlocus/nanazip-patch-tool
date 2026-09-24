@@ -2,7 +2,7 @@
 
 ## 📋 Project description
 
-Welcome to **NanaZip Patch Tool** (`RemoveSponsorshipAndInstall.ps1`) — a universal patching and build tool for [NanaZip](https://github.com/M2Team/NanaZip) sources.
+Welcome to **NanaZip Patch Tool** (`NanaZipPatchTool.ps1`) — a universal patching and build tool for [NanaZip](https://github.com/M2Team/NanaZip) sources.
 
 Out of the box it ships with one patch — **complete sponsorship removal** (toolbar button, dialog, Store API) — then builds a **Release** package, signs it with a test certificate, installs it via `msixbundle`, and cleans up the certificate afterwards.
 
@@ -29,13 +29,13 @@ Out of the box it ships with one patch — **complete sponsorship removal** (too
 1. **Place the script** into the NanaZip sources root (or anywhere — the path can be picked in the menu):
 
    ```powershell
-   Copy-Item RemoveSponsorshipAndInstall.ps1 C:\path\to\NanaZip-main\
+   Copy-Item NanaZipPatchTool.ps1 C:\path\to\NanaZip-main\
    ```
 
 2. **Run it**:
 
    ```powershell
-   powershell -ExecutionPolicy Bypass -File RemoveSponsorshipAndInstall.ps1
+   powershell -ExecutionPolicy Bypass -File NanaZipPatchTool.ps1
    ```
 
 3. **Use the menu**:
@@ -59,13 +59,13 @@ Out of the box it ships with one patch — **complete sponsorship removal** (too
 
    ```powershell
    # Everything, no questions:
-   powershell -ExecutionPolicy Bypass -File RemoveSponsorshipAndInstall.ps1 -NoMenu
+   powershell -ExecutionPolicy Bypass -File NanaZipPatchTool.ps1 -NoMenu
 
    # Patches only, no build/install:
-   powershell -ExecutionPolicy Bypass -File RemoveSponsorshipAndInstall.ps1 -PatchOnly
+   powershell -ExecutionPolicy Bypass -File NanaZipPatchTool.ps1 -PatchOnly
 
    # Install a ready bundle from Output without rebuilding:
-   powershell -ExecutionPolicy Bypass -File RemoveSponsorshipAndInstall.ps1 -SkipBuild
+   powershell -ExecutionPolicy Bypass -File NanaZipPatchTool.ps1 -SkipBuild
    ```
 
 ## 📂 Menu / automation reference
